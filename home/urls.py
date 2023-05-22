@@ -1,7 +1,9 @@
 
 from django.urls import path
 from . import views
+from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 urlpatterns = [
     
     path('',views.home , name="home"),
@@ -21,7 +23,7 @@ urlpatterns = [
     path('admin_panel',views.admin_panel,name='admin_panel'),
     path('delete_user/<str:id>',views.delete_user,name='delete_user'),
     path('delete_feedback/<str:id>',views.delete_feedback,name='delete_feedback'),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
 from django.conf import settings
 from django.conf.urls.static import static
