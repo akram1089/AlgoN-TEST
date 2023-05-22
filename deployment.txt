@@ -1,0 +1,4 @@
+1, pyscopg2-binary 2.9.5
+2,dj-database-url     2.0.0 , for remotely connect to database using externaal database url
+3,django-environ      0.10.0 , keep all infromation private
+4,gunicorn middle man between django and render

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    {% load socialaccount %}
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard</title>
+    {% comment %} <link rel="stylesheet" href=" {% static 'style.css' %} "> {% endcomment %}
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+   
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <style>
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      #sidebar-wrapper {
+        margin-left: 0;
+      }
+      #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+      }
+      body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+        margin-left: -15rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #sidebar-wrapper {
+        margin-left: 0;
+      }
+      #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+      }
+      body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+        margin-left: -15rem;
+      }
+    }
+    .wrapper {
+        left: -13px;
+      position: relative;
+      
+    }
+    #navbarSupportedContent{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+    }
+
+    .btn-primary{
+        --bs-btn-bg: #04275d;
+      }
+      .btn:hover {
+        color: var(--bs-btn-hover-color);
+        background-color: #042452;
+        border-color: #021a3d;
+    }
+
+    #sidebarToggle{
+        padding: 18px;
+    border-radius: 5px;
+    background: #d4dadc;
+    margin-right: 13px;
+    cursor: pointer;
+    }
+    .alert-dismissible {
+      top: 10vh !important;
+      position: absolute !important;
+      z-index: 9 !important;
+  }
+  </style>
+  <body>
+    <div class="d-flex " id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper" style="width: 16rem;">
+        <div class="sidebar-heading border-bottom bg-light" style="    height: 4.8rem;
+        text-align: center;">
+            <a href="/" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="display-5 text-primary m-0" style="    font-weight: 700;">AlgoN</h1>
+            </a>
+        </div>
+        <div class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3  "
+            href=" {% url 'home' %} "
+            >Home</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3 active "
+            href=" {% url 'dashboard' %}"
+            >Dashboard</a
+          >
+<h4 class="text-primary">Features</h4>
+
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Api credentials</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Paper Trading V2</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Membership</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >M2M (BETA)</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Fake management</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Features & Logs </a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Indicator </a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Tool  & Help </a>
+            <h4 class="text-primary">Support</h4>
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Telegram group</a>
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Telegram Channel</a>
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            >Contact us</a
+
+          >
+            <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="#!"
+            > FAQ</a
+
+          >
+        </div>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid  ">
+           
+                <i class="bi bi-three-dots-vertical" id="sidebarToggle"></i>
+  
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mt-2 mt-lg-0" style='    display: flex;
+              align-items: center;
+              gap: 1rem;'>
+            
+               <li>
+                {% if user.is_authenticated %}
+                {{user.username}}
+                {% endif %}
+               </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    id="navbarDropdown"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >
+                    <img src="{% static 'images/pngwing.com.png' %}" style="width: 43px !important;">
+                    </a
+                  >
+                  <div
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdown"
+                  >
+                  {% if user.is_superuser %}
+                  <h5 class="text-center text-primary">Admin</h5>
+
+            
+                    <a class="dropdown-item" href=" {% url 'admin_panel' %} ">Admin panel</a>
+                  {% endif %}
+                    <a class="dropdown-item" href=" {% url 'user_details' %} ">Profile</a>
+                  
+                    <a class="dropdown-item" href=" {% url 'logout' %} ">Logout</a>
+                  
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+         {% block dashboard_body %}{% endblock dashboard_body %}
+      </div>
+    </div>
+    {% for message in messages %}
+
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" tabindex="-1" role="alert" id="Alert">
+  <strong>Alert!</strong> {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        // Toggle the side navigation
+        const sidebarToggle = document.body.querySelector("#sidebarToggle");
+        if (sidebarToggle) {
+          // Uncomment Below to persist sidebar toggle between refreshes
+          // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+          //     document.body.classList.toggle('sb-sidenav-toggled');
+          // }
+
+          sidebarToggle.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            var element = document.getElementById("wrapper");
+            element.classList.toggle("wrapper");
+
+            document.body.classList.toggle("sb-sidenav-toggled");
+            localStorage.setItem(
+              "sb|sidebar-toggle",
+              document.body.classList.contains("sb-sidenav-toggled")
+            );
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+{% extends 'Base.html' %}
+{% block title %}login{% endblock title %}
+{% block body %}
+{% load socialaccount %}
+
+<style>
+  .btn-primary{
+    --bs-btn-bg: #04275d;
+  }
+  .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #042452;
+    border-color: #021a3d;
+}
+
+
+</style>
+<section class="demo_2 demo_3 banner_section">
+<div class="container "  style="
+position: relative;
+margin-top: -3rem;
+z-index: 1;
+">
+    
+    <div class="row" style="justify-content: center;">
+     <div class="col-4  " style="width: 28rem;">
+
+      <form action="{% url 'login' %}" method="post" novalidate class="shadow p-5 needs-validation" id="login_alignments" style="     display: flex;
+      background: white;
+      flex-direction: column;
+      border-radius: 10px;">
+        <h1 class="display-5 text-primary m-0 text-center mb-3">AlgoN</h1>
+       {% csrf_token %}
+       <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="text" class="form-control" name='uname' id="exampleInputEmail1" required aria-describedby="emailHelp" placeholder="johndoe@gmail.com">
+       </div>
+       <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" required name='pass' placeholder="*******">
+       </div>
+       <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+      </div>
+       <small><a href="#"  class="mx-auto">Forgot Password ?</a></small> <br>
+       <input type="submit" class="btn btn-primary mt-4" value="Login">
+       <br>
+       <div class="text-center text-primary fw-bold"><small>New on our platfrom ? <a href="{% url 'signup' %}"
+          class="text-danger">Create an Account</a> </small></div>
+          <div class="bars d-flex justify-content-center mt-2">
+              <div class="left-bar">--------</div>
+              <p>or</p>
+              <div class="right-bar">-------</div>
+          </div>
+          <div class="social-media">
+            <div class="social-icons d-flex justify-content-center ">
+                <div class="facebook border">
+                    <i class="bi bi-facebook ms-1 me-1"></i>
+                </div>
+                <i class="bi bi-twitter ms-1 me-1"></i>
+               <a href=" {% provider_login_url 'google' %} ">  <i class="bi bi-google ms-1 me-1"> </i></a> 
+                <i class="bi bi-github ms-1 me-1"></i>
+                <i class="bi bi-dribbble ms-1 me-1"></i>
+            </div>
+        </div>
+      </form>
+     </div>
+    </div>
+   </div>
+  </section>
+  <script>
+
+    (() => {
+      'use strict'
+      
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+      
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+      
+        form.classList.add('was-validated')
+      }, false)
+      })
+      })()
+
+  </script>
+{% endblock body %}

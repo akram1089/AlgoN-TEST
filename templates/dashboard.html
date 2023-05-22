@@ -1,0 +1,237 @@
+{% extends 'Base_dashboard.html' %}
+{% load static %}
+
+{% block dashboard_body %}
+
+<style>
+    @media (max-width: 1000px) {
+        .row{
+        flex-direction: column;
+    align-items: center;
+    }
+    #section_mobile{
+        width: 100%;
+    }
+    .partner{
+        display: flex !important;
+        justify-content: center !important;
+    }
+    }
+
+</style>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-8 " id="section_mobile">
+
+<div class="plan_section" style="       padding: 1rem;
+margin-top: 1rem;
+display: flex;
+flex-wrap: wrap;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+justify-content: space-around;">
+
+    <div class="f_plan d-flex gap-2">
+        <div class="icon">
+            <i class="bi bi-person-fill-x fs-1"></i>
+        </div>
+        <div class="right_plan_section">
+            <h4>0</h4>
+            <h5>Plan expire in </h5>
+        </div>
+    </div> 
+    <div class="f_plan d-flex gap-2">
+        <div class="icon">
+            <i class="bi bi-person-fill-x fs-1"></i>
+        </div>
+        <div class="right_plan_section">
+            <h4>0</h4>
+            <h5>MT-MT5 Plan</h5>
+        </div>
+    </div> 
+    <div class="f_plan d-flex gap-2">
+        <div class="icon">
+            <i class="bi bi-people-fill fs-1"></i>
+        </div>
+        <div class="right_plan_section">
+            <h4>0</h4>
+            <h5>Total referal</h5>
+        </div>
+    </div> 
+    <div class="f_plan d-flex gap-2">
+        <div class="icon">
+            <i class="bi bi-link fs-1"></i>
+        </div>
+        <div class="right_plan_section">
+            <h4>0</h4>
+            <h5>Total api</h5>
+        </div>
+    </div> 
+
+</div>
+
+
+<!-- partner -->
+
+
+<div class="partner" style="    
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 2rem;
+">
+
+<img src=" {% static 'images/partner/5paisa.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+{% comment %} <img src=" {% static 'images/partner/aliceblue.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/angelbroking.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/ats.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/binance.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/binancev2.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+"> {% endcomment %}
+{% comment %} <img src=" {% static 'images/partner/bitbns.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/dhanhq.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/finvasia.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/ftx.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/fxcm.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/fyers.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/iiflv2.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/kotak.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/kotakneo.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/samco.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+"> {% endcomment %}
+<img src=" {% static 'images/partner/upstox.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+{% comment %} <img src=" {% static 'images/partner/zebpay.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+<img src=" {% static 'images/partner/zebu.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+"> {% endcomment %}
+<img src=" {% static 'images/partner/zerodha.png' %} " alt="" style="       width: 12rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 2rem;
+">
+
+
+</div>
+
+
+<!-- partner -->
+
+
+
+
+        </div>
+        <div class="col-4 " id="section_mobile">
+{% comment %}             
+<div class="right_dashboard" style="  padding: 1rem;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   display: flex;
+   flex-wrap: wrap;">
+
+    <div class="card card-congratulation-medal">
+        <div class="card-body">
+            <h4>Copy Box 🎉</h4>
+            <p class="card-text font-small-3">Click Any Button To Copy required Detail</p>
+            <p class="card-text font-small-3 text-danger font-weight-bold">!! Never Share Below URL Anywhere</p>
+            <div class="demo-inline-spacing">
+                <button type="button" class="btn copy_btn btn-outline-info waves-effect waves-float waves-light button_copy" data-clipboard-text="tufailakram81@gmail.com"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail mr-25"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Email </button>
+                <button type="button" class="btn copy_btn btn-outline-success waves-effect waves-float waves-light button_copy" data-clipboard-text="https://nextlevelbot.com/register?code=645f50dd3694e"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus mr-25"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg> Referral Url </button>
+                <button type="button" class="btn copy_btn btn-outline-dark waves-effect waves-float waves-light button_copy" data-clipboard-text="https://nextlevelbot.com/chartink/bXB1ZitwYUUzTmhVa3J3bFBTV0dlOHhQanBXdCtBa1BDTXFBK3BMeHo4OXc2cVlHRlhXQzJxNENNR053dlN2Sg==">Chartink Webhook</button>
+                
+                <button type="button" class="btn copy_btn btn-outline-dark waves-effect waves-float waves-light button_copy" data-clipboard-text="https://webhook.nextlevelbot.com/series/bXB1ZitwYUUzTmhVa3J3bFBTV0dlOHhQanBXdCtBa1BDTXFBK3BMeHo4OXc2cVlHRlhXQzJxNENNR053dlN2Sg==">Sequence Webhook</button>
+                <a href="https://nextlevelbot.com/telegrambotapi" class="btn btn-outline-primary waves-effect waves-float waves-light"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send mr-25"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> Telegram Alert </a>
+                <a href="https://telegram.me/nlbalgobot?start=MzIyMTQ6NjQ1ZjUwZGQzNjk0ZQ==" target="_blank" class="btn btn-outline-primary waves-effect waves-float waves-light"> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send mr-25"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> TG Notification </a>
+                
+
+
+
+
+                
+                
+            </div>
+            
+         
+        </div>
+    </div>
+
+</div>
+<div class="card mt-3 shadow">
+    <div class="card-header">
+        <h4 class="card-title">What's New</h4>
+        <a href="https://nextlevelbot.com/whats-new"> View All </a>
+    </div>
+    <div class="card-body">
+        <ul class="timeline">
+                                        <li class="timeline-item">
+                    <span class="timeline-point timeline-point-indicator"></span>
+                    <div class="timeline-event">
+                        <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                            <h6>Log v1.1: 📢Finvasia</h6>
+                            <span class="timeline-event-time">2022-10-05 14:55:36</span>
+                        </div>
+                        <p></p><div>&nbsp;Finvasia TOTP Auto Login Feature Updated&nbsp;</div><p></p>
+                    </div>
+                </li>
+                                        <li class="timeline-item">
+                    <span class="timeline-point timeline-point-indicator"></span>
+                    <div class="timeline-event">
+                        <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                            <h6>Log v0.10 : 📢 Telegram Alert</h6>
+                            <span class="timeline-event-time">2022-07-16 22:07:40</span>
+                        </div>
+                        <p></p><div>Telegram Alert updated and all bugs fixed if you are using old method then please reconnect</div><p></p>
+                    </div>
+                </li>
+                                        <li class="timeline-item">
+                    <span class="timeline-point timeline-point-indicator"></span>
+                    <div class="timeline-event">
+                        <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                            <h6>Log v0.09 : 📢 Meta Trader (meta cloud api)</h6>
+                            <span class="timeline-event-time">2022-07-11 19:24:17</span>
+                        </div>
+                        <p></p><div>Now you use Pip Size with TP or SL &amp; LTP&nbsp; in Meta Trader (meta cloud api) below example Syntax.<br>note: please use gather than 2 pip size</div><pre>[{"PIPSIZE":"DEFAULT","TS":"EURUSD","TT":"BUY","Q":"0.1","SL":"3","TP":"3","OT":"MARKET","AT":"META_TRADER"}]</pre><p></p>
+                    </div>
+                </li>
+                                   
+                        </ul></div>
+</div>
+
+        </div> {% endcomment %}
+    </div>
+
+</div>
+
+{% endblock dashboard_body %}

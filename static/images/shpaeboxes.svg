@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="829.889" height="562.111" style=""><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+  <defs>
+    
+  <filter id="f077" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:label="Peel off" inkscape:menu="Materials" inkscape:menu-tooltip="Peeling painting on a wall" height="1.5" width="1.5" y="-.25" x="-.25" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" numOctaves="3" baseFrequency=".07" result="result1"/>
+            <feGaussianBlur stdDeviation="3" in="SourceAlpha"/>
+            <feComposite in2="result1" operator="in"/>
+            <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -9" result="result1"/>
+            <feComposite in="SourceGraphic" operator="in" result="result1" in2="result1"/>
+            <feTurbulence baseFrequency=".04" numOctaves="5" result="result0" type="fractalNoise"/>
+            <feDisplacementMap in2="result0" in="result1" xChannelSelector="R" yChannelSelector="G" scale="35" result="result2"/>
+            <feColorMatrix result="result3" values="4 0 0 0 0 0 1 0 0 0 0 0 2 0 0 0 0 0 0.7 0 "/>
+            <feGaussianBlur stdDeviation=".3" in="result1" result="result4"/>
+            <feComposite in2="result3" in="result4" result="fbSourceGraphic" operator="xor"/>
+            <feDiffuseLighting in="fbSourceGraphic" diffuseConstant="2" result="result3" surfaceScale="5">
+                <feDistantLight azimuth="225" elevation="25"/>
+            </feDiffuseLighting>
+            <feBlend in2="fbSourceGraphic" in="result3" mode="darken" result="result7"/>
+            <feComposite in2="fbSourceGraphic" operator="in" in="result7"/>
+        </filter></defs>
+  
+<g class="currentLayer" style=""><title>Layer 1</title><g id="Group_305" data-name="Group 305" class="selected" fill="#ffffff" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter="">
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="55.51900100708008" height="55.51900100708008" rx="6" fill="#ffffff" y="229.47468948364258" x="233.03269577026367" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="67.51899719238281" height="67.51899719238281" rx="6" fill="#ffffff" y="536.8996925354004" x="42.12870407104492" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="76.51899719238281" height="76.51899719238281" rx="6" fill="#ffffff" y="117.79269027709961" x="347.0256767272949" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="90.51899719238281" height="90.51899719238281" rx="6" fill="#ffffff" y="189.8766975402832" x="587.9217338562012" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="90.51899719238281" height="90.51899719238281" rx="6" fill="#ffffff" y="388.77670669555664" x="742.6667289733887" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="90.51899719238281" height="90.51899719238281" rx="6" fill="#ffffff" y="119.84369277954102" x="3.296703338623047" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="90.51899719238281" height="90.51899719238281" rx="6" fill="#ffffff" y="504.45969009399414" x="203.96067428588867" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="90.51899719238281" height="90.51899719238281" rx="6" fill="#ffffff" y="42.30769348144531" x="154.42667770385742" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="55.51900100708008" height="55.51900100708008" rx="6" fill="#ffffff" y="338.89868545532227" x="74.80668258666992" fill-opacity="1" opacity="0.45" stroke="#dadada" stroke-opacity="1" stroke-width="7" filter=""/>
+  </g></g></svg>

@@ -1,0 +1,68 @@
+{% extends 'Base_dashboard.html' %} {% load static %} {% block dashboard_body %}
+
+<h2
+  class="text-center text-primary border border-2"
+  style="border-radius: 10px; margin-top: 2%; padding: 3px 0 6px 0"
+>
+  All users
+</h2>
+<div class="row">
+  {% for user in User_check %}
+
+  <div class="col-sm-4 mb-3 mb-sm-0">
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Username : {{user.username}}</h5>
+        <p class="card-text">
+          Full name: {{user.first_name}} {{user.last_name}}
+        </p>
+        <p class="card-text">Phone Number: {{user.Mobile_number}}</p>
+
+{% if user.id == request.user.id %}
+<h4>Admin logged in</h1>
+{% else %}
+<form action=" delete_user/{{user.id}} " method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">Delete User</button>
+  </form>
+{% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+<h2
+  class="text-center text-primary border border-2"
+  style="border-radius: 10px; margin-top: 2%; padding: 3px 0 6px 0"
+>
+  All Feedback from Users
+</h2>
+<div class="row">
+  {% for Feedback in User_contact_us_feedback %}
+
+  <div class="col-sm-4 mb-3 mb-sm-0">
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Name : {{Feedback.c_name}}</h5>
+        <p class="card-text">Email : {{Feedback.c_email}}</p>
+        <p class="card-text">Phone Number: {{Feedback.c_number}}</p>
+        <p class="card-text">
+          Years of trading experience: {{Feedback.c_experience}}
+        </p>
+        <p class="card-text">Whats App Number: {{Feedback.c_wnumber}}</p>
+        <p class="card-text">Country: {{Feedback.c_country}}</p>
+        <p class="card-text">Message: {{Feedback.c_message}}</p>
+        <form action=" delete_feedback/{{Feedback.id}} " method="post">
+          {% csrf_token %}
+          <button class="btn btn-danger">Delete Feedback</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endblock dashboard_body %}

@@ -1,0 +1,42 @@
+{% extends 'Base_dashboard.html' %}
+{% load static %}
+
+{% block dashboard_body %}
+
+<div class="container">
+<h2 class="text-secondary mt-3">User profile</h2>
+
+<div class="button_account_title d-flex gap-2">
+    <button class="button btn btn-primary">Account</button>
+    <button class="button btn btn-light">Social</button>
+    <button class="button btn btn-light">Comapany details</button>
+</div>
+
+
+<div class="user_card mt-3" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+
+    <h3 class="p-2 text-secondary">Account details</h3>
+    <hr>
+    <form action="" enctype="multipart/form-data" method="post" style="   
+    padding: 2rem;">
+        {% csrf_token %}
+        
+        <input type="text" class="form-control" name="first_name1" placeholder="Enter first name:" value="{{request.user.first_name}}"> <br>
+        <input type="text" class="form-control" name="last_name1" placeholder="Enter last name:" value="{{request.user.last_name}}"> <br>
+        <input type="number" class="form-control" name="phone_number" placeholder="Enter your phone number :" value="{{request.user.Mobile_number}}"> <br>
+        <input type="text" class="form-control" name="hidden" placeholder="Enter last name:" value="{{request.user.username}}" > <br>
+        <input type="email" readonly class="form-control" name="email" required value="{{request.user.email}}" placeholder="Email:"> <br>    
+        {% comment %} <div class="mb-3">
+            <label for="formFile" class="form-label">Upload a profile picture</label>
+            <input class="form-control" type="file" id="formFile" name="profile_pic">
+          </div>          {% endcomment %}
+          <input type="submit" id="sign_up" class="btn btn-outline-success" value="Update changes">
+          <input type="reset" id="" class="btn btn-outline-primary" value="Reset">
+    
+      </form>
+</div>
+
+
+</div>
+
+{% endblock dashboard_body %}
