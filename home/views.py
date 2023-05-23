@@ -5,6 +5,7 @@ from django.contrib import messages
 from.models import contact_us_feedback
 from django.contrib.auth import get_user_model
 User = get_user_model()
+from .helper import send_forget_password_mail
 # Create your views here.
 
 def home(request):
@@ -140,3 +141,56 @@ def delete_feedback(request,id):
     del_contact_us_feedback.delete()
     messages.success(request, "Feedback has been deleted")
     return redirect("admin_panel")
+  
+import uuid
+def reset_password(request):
+    if request.method == 'POST':
+        email = request.POST['remail']
+        print(email)
+        if User.objects.filter(email=email):
+            token = str(uuid.uuid4())
+            profile_email = User.objects.get(email=email)
+            profile_email.forget_password_token = token
+            profile_email.save()
+            send_forget_password_mail(email, token)
+            messages.success(request, 'An email has been sent you to ,please check the mail box')
+            return redirect('/')
+
+        else:
+            messages.success(request, 'Sorry your email is not registered')
+            return redirect('/')
+
+    return render(request, 'reset-password.html')
+
+
+def change_pass(request, token):
+
+    profile_email = User.objects.filter(
+        forget_password_token=token).first()
+
+    print(profile_email)
+    context = {'user_id': profile_email.id}
+
+    if request.method == 'POST':
+        l_pass = request.POST['new_pass']
+        cpass = request.POST['confirm_pass']
+        user_id = request.POST.get('user_id')
+        print(l_pass, cpass)
+
+  
+
+        if l_pass != cpass:
+            messages.error(request, 'both should  be equal.')
+            return redirect(f'/change_pass/{token}/')
+
+        else:
+            change_pass = User.objects.get(id=user_id)
+            change_pass.password = l_pass
+            change_pass.confirm_password = cpass
+            change_pass.set_password(l_pass)
+            change_pass.save()
+            messages.success(request, 'pass changed.')
+
+            return redirect('/')
+
+    return render(request, 'change_pass.html', context)

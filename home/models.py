@@ -14,6 +14,7 @@ class User(AbstractUser):
     Mobile_number=models.CharField( max_length=50,null=True,blank=True)
     password=models.CharField( max_length=500,null=True,blank=True)
     confirm_password=models.CharField( max_length=50,null=True,blank=True)
+    forget_password_token=models.CharField (max_length=150 ,null=True)
   
 
     objects=UserManager()

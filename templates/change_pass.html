@@ -1,0 +1,98 @@
+
+
+
+
+
+
+
+{% extends 'Base.html' %}
+{% block title %}Reset password{% endblock title %}
+{% block body %}
+{% load socialaccount %}
+
+<style>
+  .btn-primary{
+    --bs-btn-bg: #04275d;
+  }
+  .btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #042452;
+    border-color: #021a3d;
+}
+
+
+</style>
+<section class="demo_2 demo_3 banner_section">
+<div class="container "  style="
+position: relative;
+margin-top: -3rem;
+z-index: 1;
+">
+    
+    <div class="row" style="justify-content: center;">
+     <div class="col-4  " style="width: 28rem;">
+
+      <form action="" method="post" novalidate class="shadow p-5 needs-validation" id="login_alignments" style="     display: flex;
+      background: white;
+      flex-direction: column;
+      border-radius: 10px;">
+      
+      <h1 class="display-5 text-primary m-0 text-center mb-3">AlgoN</h1>
+
+      {% csrf_token %}
+      
+      <input type="password" name="new_pass" class="form-control"  placeholder="Enter new password" required > <br>
+      
+      <input type="password" name="confirm_pass"  class="form-control" placeholder="Enter confirm password" required > <br>
+      <input type="submit" class="button btn btn-success"  value="Change password">
+
+      <input type="hidden" name="user_id" value="{{user_id}}">
+        
+        
+
+
+
+      </form>
+     </div>
+    </div>
+   </div>
+  </section>
+  <script>
+
+    (() => {
+      'use strict'
+      
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+      
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+      
+        form.classList.add('was-validated')
+      }, false)
+      })
+      })()
+
+      feather.replace({ 'aria-hidden': 'true' });
+
+      $(".togglePassword").click(function (e) {
+            e.preventDefault();
+            var type = $(this).parent().parent().find(".password").attr("type");
+            console.log(type);
+            if(type == "password"){
+                $("svg.feather.feather-eye").replaceWith(feather.icons["eye-off"].toSvg());
+                $(this).parent().parent().find(".password").attr("type","text");
+            }else if(type == "text"){
+                $("svg.feather.feather-eye-off").replaceWith(feather.icons["eye"].toSvg());
+                $(this).parent().parent().find(".password").attr("type","password");
+            }
+        });
+      
+
+  </script>
+{% endblock body %}

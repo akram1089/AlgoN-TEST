@@ -43,7 +43,7 @@ z-index: 1;
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Remember Me</label>
       </div>
-       <small><a href="#"  class="mx-auto">Forgot Password ?</a></small> <br>
+       <small><a href=" {% url 'reset_password' %} "  class="mx-auto">Forgot Password ?</a></small> <br>
        <input type="submit" class="btn btn-primary mt-4" value="Login">
        <br>
        <div class="text-center text-primary fw-bold"><small>New on our platfrom ? <a href="{% url 'signup' %}"

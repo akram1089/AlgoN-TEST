@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin_panel',views.admin_panel,name='admin_panel'),
     path('delete_user/<str:id>',views.delete_user,name='delete_user'),
     path('delete_feedback/<str:id>',views.delete_feedback,name='delete_feedback'),
+    path('reset_password/',views.reset_password,name='reset_password'),
+    path('change_pass/<token>/',views.change_pass,name='change_pass'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
 from django.conf import settings

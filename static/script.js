@@ -8,18 +8,23 @@ var spinner = function () {
 };
 spinner();
 
+function nav_bar() {
+    if ($(window).width() < 992) {
+
+        $('.fixed-top').addClass('bg-light shadow');
+        $('.nav-item,.nav-item a').addClass('text-dark');
+    
+    }else{
+        $('.fixed-top').removeClass('bg-light shadow');
+        $('.nav-item,.nav-item a').removeClass('text-dark');   
+    }
+}
+
 $(window).scroll(function () {
 
-    if ($(window).width() < 992) {
-        if ($(this).scrollTop() > 45) {
-            $('.fixed-top').addClass('bg-light shadow');
-            $('.nav-item, .nav-item a').addClass('text-light');
-         
-        } else {
-            $('.fixed-top').removeClass('bg-light shadow');
-            $('.nav-item,.nav-item a').removeClass('text-light');
-        }
-    } else {
+    if ($(window).width() > 992) {
+        
+
         if ($(this).scrollTop() > 45) {
             $('.nav-item,.nav-item a').addClass('text-dark');
             $('.fixed-top').addClass('bg-light shadow').css('top', 0);
